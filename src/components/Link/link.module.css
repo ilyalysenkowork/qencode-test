@@ -1,0 +1,15 @@
+.link {
+  color: var(--btn-primary-bg);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.right {
+  display: block;
+  text-align: right;
+  margin-bottom: 15px;
+}
+
+.link:hover {
+  color: var(--btn-primary-hover)
+}

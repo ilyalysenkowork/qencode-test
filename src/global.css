@@ -1,0 +1,48 @@
+@import-normalize;
+@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@700&family=Inter:wght@100..900&display=swap");
+
+:root {
+  --btn-bg: #fff;
+  --text: #060E1E;
+  --btn-hover: #d9d9d9;
+
+  --btn-primary-bg: #316FEA;
+  --btn-primary-hover: #5085ed;
+  --btn-primary-text: #FFFFFF;
+
+  --error-color: #C1292E;
+
+  --border-color: #D3D8DC;
+
+  --divider-text: #BEC5CC;
+  --divider-line: #E3E6E9;
+}
+
+body,html {
+  margin: 0;
+  padding: 0;
+}
+
+body, #root {
+  height:100vh;
+}
+
+
+.container {
+  width: 400px;
+  margin: 0px auto;
+  padding-top: 180px
+}
+
+* {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+}
+

@@ -1,0 +1,26 @@
+.divider {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    color: var(--divider-text);
+    text-transform: uppercase;
+    margin: 30px 0px;
+  }
+  
+  .divider::before, .divider::after {
+    flex: 1;
+    content: '';
+    padding: 1px;
+    background-color: var(--divider-line);
+  }
+
+  .divider::after {
+    margin-left: 5px;
+  }
+
+  .divider::before {
+    margin-right: 5px;
+  }
