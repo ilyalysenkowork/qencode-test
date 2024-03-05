@@ -34,6 +34,16 @@ body, #root {
   padding-top: 180px
 }
 
+@media only screen 
+  and (min-device-width: 0px) 
+  and (max-device-width: 767px) {
+    .container {
+      width: 100%;
+      padding: 0px 10px;
+      padding-top: 180px;
+    }
+}
+
 * {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
