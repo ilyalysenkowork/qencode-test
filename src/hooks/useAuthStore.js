@@ -43,6 +43,7 @@ const useAuthStore = create((set, get) => ({
         console.log(response);
       })
       .catch(({ response: { data } }) => {
+        // eslint-disable-next-line
         const { err, detail } = data;
         // set errors to show to user if there are any
         set((state) => ({
@@ -68,6 +69,7 @@ const useAuthStore = create((set, get) => ({
         navigate('/')
       })
       .catch(({ response: { data } }) => {
+        // eslint-disable-next-line
         const { err, detail } = data;
         console.log(data);
         // check if we have singular or multiple errors
@@ -124,6 +126,7 @@ const useAuthStore = create((set, get) => ({
         }));
       })
       .catch(({ response: { data } }) => {
+        // eslint-disable-next-line
         const { err, detail } = data;
 
         if (Array.isArray(detail)) {
