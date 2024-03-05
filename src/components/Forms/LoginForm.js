@@ -20,7 +20,7 @@ const LoginForm = () => {
       initialLoginPress: state.initialLoginPress,
       onSubmit: state.onLoginSubmit,
       loginState: state.loginState,
-    }))
+    })),
   );
 
   return (

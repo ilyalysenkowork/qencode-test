@@ -3,23 +3,22 @@
  * @param {*} state - app state
  * @param {*} formikProps - props from formik
  * @param {*} field - field name
- * @returns 
+ * @returns
  */
 const handleError = (state, formikProps, field) => {
-  if(!state.errors) {
-    return null
+  if (!state.errors) {
+    return null;
   }
 
-  if(state?.errors[field]) {
-    return state.errors[field]
+  if (state?.errors[field]) {
+    return state.errors[field];
   }
 
-  if(formikProps?.errors[field] && formikProps?.touched[field]) {
-    return formikProps.errors[field]
+  if (formikProps?.errors[field] && formikProps?.touched[field]) {
+    return formikProps.errors[field];
   }
 
+  return null;
+};
 
-  return null
-}
-
-export default handleError
+export default handleError;

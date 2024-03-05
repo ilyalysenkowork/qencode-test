@@ -20,7 +20,7 @@ const NewPasswordForm = () => {
     useShallow((state) => ({
       onSubmit: state.onPasswordSetSubmit,
       setPassState: state.setPassState,
-    }))
+    })),
   );
 
   return (

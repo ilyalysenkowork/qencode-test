@@ -3,45 +3,44 @@
 
 :root {
   --btn-bg: #fff;
-  --text: #060E1E;
+  --text: #060e1e;
   --btn-hover: #d9d9d9;
 
-  --btn-primary-bg: #316FEA;
+  --btn-primary-bg: #316fea;
   --btn-primary-hover: #5085ed;
-  --btn-primary-text: #FFFFFF;
+  --btn-primary-text: #ffffff;
 
-  --error-color: #C1292E;
+  --error-color: #c1292e;
 
-  --border-color: #D3D8DC;
+  --border-color: #d3d8dc;
 
-  --divider-text: #BEC5CC;
-  --divider-line: #E3E6E9;
+  --divider-text: #bec5cc;
+  --divider-line: #e3e6e9;
 }
 
-body,html {
+body,
+html {
   margin: 0;
   padding: 0;
 }
 
-body, #root {
-  height:100vh;
+body,
+#root {
+  height: 100vh;
 }
-
 
 .container {
   width: 400px;
   margin: 0px auto;
-  padding-top: 180px
+  padding-top: 180px;
 }
 
-@media only screen 
-  and (min-device-width: 0px) 
-  and (max-device-width: 767px) {
-    .container {
-      width: 100%;
-      padding: 0px 10px;
-      padding-top: 80px;
-    }
+@media only screen and (min-device-width: 0px) and (max-device-width: 767px) {
+  .container {
+    width: 100%;
+    padding: 0px 10px;
+    padding-top: 80px;
+  }
 }
 
 * {
@@ -55,4 +54,3 @@ body, #root {
   /* Firefox, other Gecko */
   box-sizing: border-box;
 }
-

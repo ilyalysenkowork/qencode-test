@@ -11,5 +11,5 @@
 }
 
 .link:hover {
-  color: var(--btn-primary-hover)
+  color: var(--btn-primary-hover);
 }

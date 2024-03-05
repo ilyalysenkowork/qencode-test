@@ -20,7 +20,7 @@ const ForgotPasswordForm = () => {
     useShallow((state) => ({
       onSubmit: state.onPasswordResetSubmit,
       resetPassState: state.resetPassState,
-    }))
+    })),
   );
   return (
     <Formik

@@ -12,5 +12,5 @@ root.render(
     <div className="container">
       <RouterProvider router={router} />
     </div>
-  </React.StrictMode>
+  </React.StrictMode>,
 );

@@ -40,7 +40,6 @@ const useAuthStore = create((set, get) => ({
       .then((response) => {
         // if success, redirect to new page
         navigate("/new");
-        console.log(response);
       })
       .catch(({ response: { data } }) => {
         // eslint-disable-next-line
@@ -66,12 +65,11 @@ const useAuthStore = create((set, get) => ({
     })
       .then((response) => {
         // if attempt was successful - redirect to login
-        navigate('/')
+        navigate("/");
       })
       .catch(({ response: { data } }) => {
         // eslint-disable-next-line
         const { err, detail } = data;
-        console.log(data);
         // check if we have singular or multiple errors
         if (Array.isArray(detail)) {
           const errors = {};

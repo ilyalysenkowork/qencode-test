@@ -1,7 +1,7 @@
 /**
  * Login page validation
- * @param {*} values 
- * @param {*} initialLoginPress 
+ * @param {*} values
+ * @param {*} initialLoginPress
  * @returns {}
  */
 export const validateLogin = (values, initialLoginPress) => {
@@ -22,7 +22,7 @@ export const validateLogin = (values, initialLoginPress) => {
 
 /**
  * Validates only email field email
- * @param {*} values 
+ * @param {*} values
  * @returns {}
  */
 export const validateEmail = (values) => {
@@ -41,20 +41,20 @@ export const validateEmail = (values) => {
  * @param {*} values
  * @returns {}
  */
-export const validatePasswords = ({password, password_confirm}) => {
+export const validatePasswords = ({ password, password_confirm }) => {
   const errors = {};
 
-  if(!password) {
-    errors.password = "This field can't be empty"
+  if (!password) {
+    errors.password = "This field can't be empty";
   }
 
-  if(!password_confirm) {
-    errors.password_confirm = "This field can't be empty"
+  if (!password_confirm) {
+    errors.password_confirm = "This field can't be empty";
   }
 
-  if(password !== password_confirm) {
-    errors.password_confirm = "Passwords don't match"
+  if (password !== password_confirm) {
+    errors.password_confirm = "Passwords don't match";
   }
 
-  return errors
-}
+  return errors;
+};

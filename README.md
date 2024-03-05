@@ -2,11 +2,12 @@
 
 Neflify Link: [(incoming)](https://main--astonishing-queijadas-e02e76.netlify.app/)
 
-## Libraries used: 
+## Libraries used:
+
 1. Formik for Form handling
 2. Axios for requests
 3. zustand for state management
-4. React Router v6 for routing 
+4. React Router v6 for routing
 
 ## Available Scripts
 
