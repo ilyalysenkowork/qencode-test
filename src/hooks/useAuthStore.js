@@ -38,8 +38,7 @@ const useAuthStore = create((set, get) => ({
       data: { ...values, redirect_url },
     })
       .then((response) => {
-        // if success, redirect to new page
-        navigate("/new");
+
       })
       .catch(({ response: { data } }) => {
         // eslint-disable-next-line
@@ -55,17 +54,28 @@ const useAuthStore = create((set, get) => ({
       });
   },
 
-  onPasswordSetSubmit: (values, navigate) => {
+  onPasswordSetSubmit: (values, params) => {
     get().resetErrors();
+    if(params.secret && !params.token) {
+      set((state) => ({
+        setPassState: {
+          ...state.loginState,
+          hasFailed: true,
+          message: "Something went wrong",
+        },
+      }));
+
+      return
+    }
     axios({
       method: "POST",
       url: PASSWORD_SET_URL,
       // Don't have actual data on token and secret. Documentation says it comes in URL, but can't test it
-      data: { ...values, token: "test_token", secret: "test_token" },
+      data: { ...values, ...params },
     })
       .then((response) => {
         // if attempt was successful - redirect to login
-        navigate("/");
+       
       })
       .catch(({ response: { data } }) => {
         // eslint-disable-next-line

@@ -15,18 +15,20 @@ const initialValues = {
   password_confirm: "",
 };
 
-const NewPasswordForm = () => {
+const NewPasswordForm = ({ params }) => {
   const { onSubmit, setPassState } = useAuthStore(
     useShallow((state) => ({
       onSubmit: state.onPasswordSetSubmit,
       setPassState: state.setPassState,
-    })),
+    }))
   );
 
   return (
     <Formik
       initialValues={initialValues}
-      onSubmit={onSubmit}
+      onSubmit={(values) => {
+        onSubmit(values, params);
+      }}
       validate={validatePasswords}
     >
       {(formikProps) => (
