@@ -37,9 +37,7 @@ const useAuthStore = create((set, get) => ({
       url: PASSWORD_RESET_URL,
       data: { ...values, redirect_url },
     })
-      .then((response) => {
-
-      })
+      .then((response) => {})
       .catch(({ response: { data } }) => {
         // eslint-disable-next-line
         const { err, detail } = data;
@@ -54,9 +52,9 @@ const useAuthStore = create((set, get) => ({
       });
   },
 
-  onPasswordSetSubmit: (values, params) => {
+  onPasswordSetSubmit: (values, params, navigate) => {
     get().resetErrors();
-    if(params.secret && !params.token) {
+    if (params.secret && !params.token) {
       set((state) => ({
         setPassState: {
           ...state.loginState,
@@ -65,17 +63,18 @@ const useAuthStore = create((set, get) => ({
         },
       }));
 
-      return
+      return;
     }
+
     axios({
       method: "POST",
       url: PASSWORD_SET_URL,
       // Don't have actual data on token and secret. Documentation says it comes in URL, but can't test it
-      data: { ...values, ...params },
+      data: { ...values, secret: params.secret, token: params.token },
     })
       .then((response) => {
         // if attempt was successful - redirect to login
-       
+        navigate("/");
       })
       .catch(({ response: { data } }) => {
         // eslint-disable-next-line

@@ -7,6 +7,7 @@ import styles from "./forms.module.css";
 import { validatePasswords } from "../../utils/validation";
 import handleError from "../../utils/handleError";
 import useAuthStore from "../../hooks/useAuthStore";
+import { useNavigate } from "react-router-dom";
 import Error from "../Error";
 import Link from "../Link";
 
@@ -16,6 +17,7 @@ const initialValues = {
 };
 
 const NewPasswordForm = ({ params }) => {
+  const navigate = useNavigate();
   const { onSubmit, setPassState } = useAuthStore(
     useShallow((state) => ({
       onSubmit: state.onPasswordSetSubmit,
@@ -27,7 +29,7 @@ const NewPasswordForm = ({ params }) => {
     <Formik
       initialValues={initialValues}
       onSubmit={(values) => {
-        onSubmit(values, params);
+        onSubmit(values, params, navigate);
       }}
       validate={validatePasswords}
     >
